@@ -182,12 +182,12 @@ Cells use \textbf{axial} coordinates $(q, r)$, pointy-top layout. A third coordi
 \begin{lstlisting}
 #[derive(Copy, Clone, PartialEq, Eq, Hash, PartialOrd, Ord, Debug)]
 pub struct Cell {
-  pub q: i32,
-  pub r: i32
+  pub q: i64,
+  pub r: i64
 }
 
 impl Cell {
-    pub fn s(self) -> i32 { -self.q - self.r }
+    pub fn s(self) -> i64 { -self.q - self.r }
     pub fn neighbour(self, direction: Direction) -> Cell;
     pub fn distance (self, other: Cell) -> u32;
     pub fn neighbours(self) -> [Cell; 6];
